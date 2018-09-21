@@ -102,6 +102,7 @@
     
     ///////////////////////////////////////////// Score
     function score() {
+        yaya yitosdti;lsdnjwhesjklgthwejklstfrheklswfrheklwfrhklwehfrlkwehfrklwehfrklweh
         return true;
     }
     
