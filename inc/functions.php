@@ -97,12 +97,14 @@
 
     ///////////////////////////////////////////// Play
     function play () {
+        for ($j = 0, $j < 4; $j++){
+        }
         return true;
     }
     
     ///////////////////////////////////////////// Score
     function score() {
-        yaya yitosdti;lsdnjwhesjklgthwejklstfrheklswfrheklwfrhklwehfrlkwehfrklwehfrklweh
+
         return true;
     }
     
