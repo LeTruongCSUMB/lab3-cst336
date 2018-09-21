@@ -1,3 +1,1 @@
-# Silverjack
-
-banana
+# lab3-Silverjack
