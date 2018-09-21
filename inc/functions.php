@@ -8,7 +8,7 @@
     $cards[]["taken"] = 1; // When card is added
     
     ///////////////////////////////////////////// Setup for Setup
-    function setupSetup() {
+    function initialize() {
         setupPlayers();
         setupCards();
     }
