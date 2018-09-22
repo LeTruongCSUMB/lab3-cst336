@@ -12,10 +12,9 @@
     </head>
     <body>
             <?php
-            // initialize()
-            // setup()
-            // play()
-            // score()
+                setupCards();
+                seatPlayers();
+                play();
             ?>
     </body>
 </html>
