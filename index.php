@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-
+    include "inc/functions.php";
 ?>
 
 
@@ -11,6 +11,11 @@
         <title>Silverjack</title>
     </head>
     <body>
-            
+            <?php
+            // initialize()
+            // setup()
+            // play()
+            // score()
+            ?>
     </body>
 </html>
