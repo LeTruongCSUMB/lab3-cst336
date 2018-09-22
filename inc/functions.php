@@ -20,7 +20,7 @@
                     else if(j < 40)
                         $cards[j]["suit"] = "hearts";
                     else
-                        $cards[j]["suit"] = "hearts";
+                        $cards[j]["suit"] = "spades";
                         
                     $cards[j]["value"] = j;
                     $cards[j]["taken"] = 0;
@@ -42,8 +42,26 @@
     
     ///////////////////////////////////////////// Play
     function play () {
-        for ($j = 1; $j <= 4; $j++){
-            if($j == 1) {
+        for ($j = 0; $j < 4; $j++){
+            if($j == 0){
+                $randNum = rand(1, count($cards)-1);
+                //gets a number from 1-52
+                $cards[$randNum];
+                //sets the card's number
+                unset($cards[$randNum]);
+                //removes card from the array
+                while($players[$j]["cardSum"] < 36) {
+                    $randNum = rand(1, count($cards)-1);
+                    $player[$j]["cardSum"] += $randNum;
+                    if ($randNum < 14) {
+                        
+                    }else if ($randNum < 27) {
+                        $randNum = $randNum - 13;
+                    }
+                     echo "<img src='$randNum.png'>";
+                     
+                }
+                
             }
         }
         return true;
