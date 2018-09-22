@@ -13,6 +13,7 @@
          
                 for($j = 1; $j <= 52; $j++) {
                     
+<<<<<<< HEAD
                     if($j < 14) {
                         $cards[$j]["suit"] = "clubs";
                         $cards[$j]["value"] = $j;
@@ -29,6 +30,16 @@
                         $cards[$j]["suit"] = "spades";
                         $cards[$j]["value"] = $j-39;
                     }
+=======
+                    if(j < 14)
+                        $cards[j]["suit"] = "clubs";
+                    else if(j < 27)
+                        $cards[j]["suit"] = "diamonds";
+                    else if(j < 40)
+                        $cards[j]["suit"] = "hearts";
+                    else
+                        $cards[j]["suit"] = "spades";
+>>>>>>> 8b28c5e63f497ad75fc00160afff2f4ad7d02fde
                         
                 }
         
@@ -49,6 +60,7 @@
     
     ///////////////////////////////////////////// Play
     function play () {
+        
         for ($i = 0; $i < 4; $i++){
             
             while($players[$i]["score"] < 38) {
@@ -57,10 +69,7 @@
                 // href= "cards/$cards[$randNum]["suit"]/$cards[$randNum]["value"].png"
                 $players[$i]["score"] += $cards[$randNum]["value"];
                 unset($cards[$randNum]);
-            }
             
-        }
-        return true;
     }
     
     ///////////////////////////////////////////// Score
