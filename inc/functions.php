@@ -1,5 +1,5 @@
 <?php
-    $playerNames = array("Reginald", "Baldwin", "Tammy", "Judge Kattis");
+    $playerNames = array("Reginald", "Garfield", "Tammy", "Judge Kattis");
     $players = array();
     $players[] = array();
     $cards = array();
