@@ -57,7 +57,7 @@
             
             echo '<img src= "img/' . $players[$i]["name"] . ".jpg" . '" width=100px height=100px />';
             while($players[$i]["score"] < 38) {
-                
+               
                 $randNum = rand(1, count($cards)-1);
                  while($cards[$randNum]["taken"] == 1) {
                      $randNum = rand(1, count($cards)-1);
