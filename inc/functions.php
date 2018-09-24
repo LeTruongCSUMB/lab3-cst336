@@ -72,16 +72,35 @@
     
     ///////////////////////////////////////////// Score
     function score() {
-        $closest = null;
+        global $cards, $players;
+        $closest;
         for ($i = 0; $i < 4; $i++){
+            echo $players[$i]['name'];
+            echo "<br><br>";
             if ($players[$i]["score"] == 42) {
-                echo "Player $playerNames[$i]['name'] has won!";
+                echo "Player ". $players[$i]['name']. " has won!";
                 echo $players[$i]["score"];
                 echo "<br><br>";
+                break;
             }else {
-
+                for ($k = 1; $k <= 42; $k++) {
+                    $closest = $players[$i]["score"] - $k;
+                    if ($closest == 42) {
+                        echo "Player ". $players[$i]["name"] . " has won!";
+                        echo $players[$i]["score"];
+                        echo "<br><br>";
+                        break 2;
+                    }else if ($closest == 0) {
+                        echo "Player ". $players[$i]["name"] . " has won!";
+                        echo $players[$i]["score"];
+                        echo "<br><br>";
+                        break 2;
+                    }
+                }
             }
         }
+        echo "End of for Loop";
+        echo "<br><br>";
     }
     
  
