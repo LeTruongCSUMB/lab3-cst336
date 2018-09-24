@@ -15,6 +15,7 @@
                 setupCards();
                 seatPlayers();
                 play();
+                score();
             ?>
     </body>
 </html>
