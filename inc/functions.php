@@ -11,25 +11,25 @@
                     if($j < 14) {
                         $cards[$j]["suit"] = "clubs";
                         $cards[$j]["value"] = $j;
-                        $cards[$j]["taken"] = 0;
                         }
                     else if($j < 27) {
                         $cards[$j]["suit"] = "diamonds";
                         $cards[$j]["value"] = $j-13;
-                        $cards[$j]["taken"] = 0;
                     }
                     else if($j < 40) {
                         $cards[$j]["suit"] = "hearts";
                         $cards[$j]["value"] = $j-26;
-                        $cards[$j]["taken"] = 0;
                     }
                     else {
                         $cards[$j]["suit"] = "spades";
                         $cards[$j]["value"] = $j-39;
-                        $cards[$j]["taken"] = 0;
                     }
                         
                 }
+                
+                unset($cards[0]);
+                $cards = array_values($cards);
+                shuffle($cards);
         
     
     }
@@ -42,10 +42,8 @@
         shuffle($playerNames);
         // Player are randomly seated
         for($i = 0; $i < 4; $i++) {
-            
             $players[$i]["name"] = $playerNames[$i];
             $players[$i]["score"] = 0;
-           
         }
         return true;
     }
@@ -53,19 +51,17 @@
     ///////////////////////////////////////////// Play
     function play () {
         global $cards, $players;
+
         for ($i = 0; $i < 4; $i++){
             
             echo '<img src= "img/' . $players[$i]["name"] . ".jpg" . '" width=100px height=100px />';
             while($players[$i]["score"] < 38) {
                 
-                $randNum = rand(1, count($cards)-1);
-                 while($cards[$randNum]["taken"] == 1) {
-                     $randNum = rand(1, count($cards)-1);
-                 }
+                echo '<img src= "cards/' . $cards[0]['suit'] . "/" . $cards[0]["value"] . ".png" . '"/>';
+                $players[$i]["score"] += $cards[0]["value"];
                 
-                echo '<img src= "cards/' . $cards[$randNum]['suit'] . "/" . $cards[$randNum]["value"] . ".png" . '"/>';
-                $players[$i]["score"] += $cards[$randNum]["value"];
-                $cards[$randNum]["taken"] = 1;
+                unset($cards[0]);
+                $cards = array_values($cards);
             }
             echo $players[$i]["score"];
             echo "<br>";
