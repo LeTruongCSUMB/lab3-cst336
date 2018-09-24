@@ -11,7 +11,7 @@
                     if($j < 14) {
                         $cards[$j]["suit"] = "clubs";
                         $cards[$j]["value"] = $j;
-                        }
+                    }
                     else if($j < 27) {
                         $cards[$j]["suit"] = "diamonds";
                         $cards[$j]["value"] = $j-13;
