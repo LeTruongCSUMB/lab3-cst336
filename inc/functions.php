@@ -76,7 +76,16 @@
     
     ///////////////////////////////////////////// Score
     function score() {
-        
+        $closest = 42;
+        for ($i = 0; $i < 4; $i++){
+            if ($players[$i]["score"] == 42) {
+                echo "Player $playerNames[$i]['name'] has won!";
+                echo $players[$i]["score"];
+                echo "<br><br>";
+            }else if ($players[$i]["score"] != 42) {
+                
+            }
+        }
     }
     
  
